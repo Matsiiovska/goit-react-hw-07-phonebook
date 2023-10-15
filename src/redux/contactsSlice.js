@@ -22,7 +22,7 @@ const contactsSlice = createSlice({
       }).addCase(
         deleteContacts.fulfilled, (state, action) => {
   state.items = state.items.filter(contact => contact.id !== action.payload.id);
-       })
+      })
       .addMatcher(isAnyOf(...getActions('fulfilled')), handleFulfilled)
       .addMatcher(isAnyOf(...getActions('pending')), handlePending)
       .addMatcher(isAnyOf(...getActions('rejected')), handleRejected),
