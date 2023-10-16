@@ -5,7 +5,7 @@ import { Form, Label, Button, Input } from './ContactForm.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
-import { addContacts } from 'redux/operations';
+import { addContacts } from '../../redux/operations';
 
 
 const nameInputId = nanoid();
