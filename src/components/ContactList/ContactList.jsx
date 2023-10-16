@@ -8,6 +8,9 @@ const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
   const dispatch = useDispatch();
 
+  const handleDeleteContact = (contactId) => {
+    dispatch(deleteContacts(contactId));
+  };
 
   return (
     <List>
@@ -17,7 +20,7 @@ const ContactList = () => {
           <Button
             type="button"
             name="delete"
-            onClick={() => deleteContacts(contact.id)}
+            onClick={() => handleDeleteContact(contact.id)} // Викликаємо функцію для видалення контакту
           >
             delete
           </Button>
